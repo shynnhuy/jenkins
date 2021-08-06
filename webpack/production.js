@@ -35,7 +35,6 @@ module.exports = merge(common, {
   },
 
   plugins: [
-    new CleanWebpackPlugin(),
     new DotENV({ path: paths.dotenvProd }),
     new MiniCssExtractPlugin(),
   ].filter(Boolean),

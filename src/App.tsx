@@ -1,5 +1,5 @@
-import { Counter } from "~root/Counter";
-import { Provider } from "~root/Provider";
+import { Counter } from "./Counter";
+import { Provider } from "./Provider";
 
 export const App = () => (
   <Provider>

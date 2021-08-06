@@ -41,6 +41,14 @@ test("counter increment button click event increase from 5 to 6", () => {
   expect(getByTestId("counter-value")).toHaveValue("6");
 });
 
+test("counter increment button click event increase from 15 to 25", () => {
+  const { getByTestId } = render(<Counter />, {
+    initialState: { counter: { value: 15 } },
+  });
+  userEvent.click(getByTestId("increment-btn-10"));
+  expect(getByTestId("counter-value")).toHaveValue("25");
+});
+
 test("render counter value input", () => {
   const { getByTestId } = render(<Counter />);
   expect(getByTestId("counter-value")).toBeInTheDocument();

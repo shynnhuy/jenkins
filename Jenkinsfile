@@ -44,6 +44,7 @@ pipeline {
     
 
     stage("Deploy") {
+      agent { node {label 'master'}}
       steps {
         sh "docker pull ${DOCKER_IMAGE}:latest"
         sh "docker run -dp 80:80 --name deploy-server ${DOCKER_IMAGE}:latest"

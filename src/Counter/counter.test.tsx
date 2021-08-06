@@ -1,6 +1,6 @@
 // import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { cleanup, render } from "test-utils";
+import { cleanup, render } from "../tests/utils";
 import { Counter } from "./index";
 
 afterEach(cleanup);

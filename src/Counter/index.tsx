@@ -1,4 +1,4 @@
-import { useAppDispatch, useAppSelector } from "~redux/hooks";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { decrement, increment, incrementByAmount } from "./slice";
 
 export const Counter = () => {

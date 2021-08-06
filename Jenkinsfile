@@ -40,6 +40,15 @@ pipeline {
         sh "docker image rm ${DOCKER_IMAGE}:latest"
       }
     }
+    
+    
+
+    stage("Deploy") {
+      steps {
+        sh "docker pull ${DOCKER_IMAGE}:latest"
+        sh "docker run -dp 80:80 --name deploy-server ${DOCKER_IMAGE}:latest"
+      }
+    }
   }
 
   post {

@@ -7,10 +7,10 @@
     "postinstall": "husky install",
     "start": "webpack serve --config webpack/development.js",
     "build": "webpack --config webpack/production.js",
-    "test": "jest --watch",
+    "test": "jest",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
-    "preci": "rm -fr node_modules",
+    "preci": "rm -rf node_modules",
     "ci": "yarn install --frozen-lockfile"
   },
   "lint-staged": {
